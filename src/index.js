@@ -2,7 +2,7 @@
 
 const flowright = require('lodash.flowright')
 
-const refLoader = require('./handlers/refLoader')
+// const refLoader = require('./handlers/refLoader')
 
 const symbols = {
   type: Symbol('type'),
@@ -11,9 +11,9 @@ const symbols = {
   parent: Symbol('parent')
 }
 
-let next = (target, key, receiver) => Reflect.get(target, key, receiver)
+// let next = (target, key, receiver) => Reflect.get(target, key, receiver)
 
-let handleGet = flowright([refLoader])(next)
+// let handleGet = flowright([refLoader])(next)
 
 // Mock check
 let getPropType = (type, propName) => propName

@@ -10,8 +10,7 @@ test('LazyLoader is function', t => {
 })
 
 test('LazyLoader instance', t => {
-  let mockClient = {}
-  let lazy = createLazyLoader(mockClient)
+  let lazy = createLazyLoader({})
 
   t.ok(lazy, 'is ok')
   t.ok(lazy.wrap, 'LazyLoader#wrap is ok')
@@ -21,8 +20,7 @@ test('LazyLoader instance', t => {
 })
 
 test('LazyLoader wrap', t => {
-  let mockClient = {}
-  let lazy = createLazyLoader(mockClient)
+  let lazy = createLazyLoader({})
 
   let obj = {}
   let wrapped = lazy.wrap(obj)
